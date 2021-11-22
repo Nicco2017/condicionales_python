@@ -30,3 +30,19 @@ contenido. Recomendamos pensar bien este problema de lógica con un lápiz y pap
 
 print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+
+tempe_1 = input("Ingrese la primer temperatura tomada:\n")
+tempe_2 = input("Ingrese la segunda temperatura tomada:\n")
+tempe_3 = input("Ingrese la ultima temperatura tomada:\n")
+
+if tempe_1 > tempe_2:
+    if tempe_1 > tempe_3:
+        print(tempe_1 , "es mayor que" , tempe_2 , "y" , tempe_3)
+    else:
+        print(tempe_3 , "es mayor que" , tempe_1 , "y" , tempe_2)
+else:
+    if tempe_2 > tempe_3:
+        print(tempe_2 , "es mayor que" , tempe_1 , "y" , tempe_3)
+    else:
+        print(tempe_3 , "es mayor que" , tempe_1 , "y" , tempe_2)
+        

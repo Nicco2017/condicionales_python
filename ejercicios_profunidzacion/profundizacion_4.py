@@ -33,3 +33,38 @@ contenido.
 
 print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+
+text_1 = str(input("Ingrese una palabra:\n"))
+text_2 = str(input("Ingrese otra palabra:\n"))
+text_3 = str(input("Ingrese la ultima palabra:\n"))
+orden = int(input("Ingrese la opcion 1 o 2:\n"))
+
+if not orden == 1 or orden == 2:
+    print("Ingrese solamente las opciones 1 o 2, mencionadas anteriormente")
+    orden = int(input("ingrese la opcion 1 o 2:\n"))
+
+# si ingresa otra opcion que no sea 1 o 2 hay que hacer un bucle para que vulva a ejecutar la orden OPCION
+# al no restringir como en este caso al ingresar una opcion como un valor a 3, el programa sigue su ejecucion.
+
+if orden == 1:
+    if text_1 > text_2:
+        if text_1 > text_3:
+            print(text_1 ,"," ,  text_2 , "y" , text_3 , "ese es su orden alfabetico")
+        else:
+            print(text_3 ,"," ,  text_1 , "y" , text_2 , "ese es su orden alfabetico")
+    else:
+        if text_2 > text_3:
+            print(text_2 , "," ,  text_3 , "y" , text_1 , "ese es su orden alfabetico")
+        else:
+            print(text_3 , "," ,  text_2 , "y" , text_1 , "ese es su orden alfabetico")
+elif orden == 2:
+    if len(text_1) > len(text_2):
+        if len(text_1) > len(text_3):
+            print(text_1 ,"," ,  text_3 , "y" , text_2 , "se ordeno por cantidad de letras de mayor a menor")
+        else:
+            print(text_3 ,"," ,  text_1 , "y" , text_2 , "se ordeno por cantidad de letras de mayor a menor")
+    else:
+        if len(text_2) > len(text_3):
+            print(text_2 ,"," ,  text_3 , "y" , text_1 , "se ordeno por cantidad de letras de mayor a menor")
+        else:
+            print(text_3 ,"," ,  text_2 , "y" , text_1 , "se ordeno por cantidad de letras de mayor a menor")
